@@ -1,8 +1,10 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Title -->
-    <title>ALOOMIC - A CREATIVE AGENCY</title>
+    <title>
+      Tank - Creative Portfolio Showcase HTML Website Template by Themetorium
+    </title>
 
     <!-- Meta -->
     <meta charset="utf-8" />
@@ -49,7 +51,6 @@
       rel="stylesheet"
       href="assets/vendor/swiper/css/swiper-bundle.min.css"
     />
-
     <!-- Swiper CSS (https://swiperjs.com/) -->
     <link
       rel="stylesheet"
@@ -57,6 +58,7 @@
     />
     <!-- lightGallery CSS (http://sachinchoolur.github.io/lightGallery) -->
 
+    <!-- Template master CSS -->
     <link rel="stylesheet" href="assets/css/helper.css" />
     <link rel="stylesheet" href="assets/css/theme.css" />
   </head>
@@ -64,7 +66,11 @@
   <!-- ===========
 	///// Body /////
 	================
-	 -->
+	* Use class "tt-boxed" to enable page boxed layout globally (affects all elements containing class "tt-wrap").
+	* Use class "tt-smooth-scroll" to enable page smooth scrolling.
+	* Use class "tt-transition" to enable page transitions.
+	* Use class "tt-magic-cursor" to enable magic cursor.
+	-->
   <body
     id="body"
     class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor"
@@ -123,13 +129,13 @@
                 <a href="index.html">
                   <!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
                   <img
-                    src="assets/images/Aloomic_light.svg"
+                    src="assets/img/logo-light.png"
                     class="tt-logo-light magnetic-item"
                     alt="Logo"
                   />
                   <!-- logo light -->
                   <img
-                    src="assets/images/Aloomic_Dark.png"
+                    src="assets/img/logo-dark.png"
                     class="tt-logo-dark magnetic-item"
                     alt="Logo"
                   />
@@ -157,44 +163,25 @@
 
               <!-- Begin overlay menu 
 							======================== 
- -->
+							* Use class "tt-ol-menu-center" to align menu to center.
+							* Use class "tt-ol-menu-count" to enable menu counter.
+							-->
               <nav class="tt-overlay-menu tt-ol-menu-center tt-ol-menu-count">
                 <div class="tt-ol-menu-holder">
                   <div class="tt-ol-menu-inner tt-wrap">
                     <div class="tt-ol-menu-content">
                       <!-- Begin menu list -->
                       <ul class="tt-ol-menu-list">
-                        <li class="active">
+                        <li>
                           <a href="index.html">HOME</a>
                         </li>
-
-                        <li class="tt-ol-submenu-wrap">
-                          <div class="tt-ol-submenu-trigger">
-                            <a href="index.html">SERVICES</a>
-                            <div class="tt-ol-submenu-caret-wrap">
-                              <div
-                                class="tt-ol-submenu-caret magnetic-item"
-                              ></div>
-                            </div>
-                            <!-- /.tt-ol-submenu-caret-wrap -->
-                          </div>
-                          <!-- /.tt-ol-submenu-trigger -->
-                          <div class="tt-ol-submenu">
-                            <ul class="tt-ol-submenu-list">
-                              <li><a href="#">UI/UX</a></li>
-                              <li><a href="#">WEB DEV</a></li>
-                              <li><a href="#">WEB DESIGN</a></li>
-                              <li><a href="#">GRAPH. DESIGN</a></li>
-                            </ul>
-                            <!-- /.tt-ol-submenu-list -->
-                          </div>
-                          <!-- /.tt-ol-submenu -->
+                        <li>
+                          <a href="index.html">SERVICES</a>
                         </li>
-
                         <li>
                           <a href="about-us.html">ABOUT</a>
                         </li>
-                        <li>
+                        <li class="active">
                           <a href="portfolio.html">PORTFOLIO</a>
                         </li>
                         <li>
@@ -223,7 +210,6 @@
           <!-- /.header-inner -->
         </header>
         <!-- End header -->
-        <!-- End header -->
 
         <!-- *************************************
 				*********** Begin content wrap *********** 
@@ -235,7 +221,18 @@
 					* ATENTION: This page header is slightly different from the default page header! 
 					It contains some extra elements and classes specifically for a portfolio single project.
 					============================= 
-				 	-->
+					* Use class "ph-full" to enable fullscreen size.
+					* Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).).
+					* Use class "ph-center" to enable content center position.
+					* Use class "ph-bg-image" to enable page header background image (required for a portfolio single project!).
+					* Use class "ph-bg-image-is-light" if needed, it makes the elements dark and more visible if you use a very light image (effect only with class "ph-bg-image").
+					* Use class "ph-image-shadow" to enable page header background image (effect only with class "ph-bg-image").
+					* Use class "ph-image-cropped" to crop image. It fixes image dimensions (no effect for "ph-bg-image"!).
+					* Use class "ph-image-cover-*" to set image overlay opacity. For example "ph-image-cover-2" or "ph-image-cover-2-5" (up to "ph-image-cover-9-5").
+					* Use class "ph-content-parallax" to enable content parallax.
+					* Use class "ph-stroke" to enable caption title stroke style.
+					* Use class "ph-inline" to enable content inline position (for a single project page only! No effect with class "ph-center"!).
+					-->
           <div
             id="page-header"
             class="

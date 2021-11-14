@@ -35,6 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!-- Secondary/Alter font -->
 
     <!-- Libs and Plugins CSS -->
@@ -57,14 +58,19 @@
     />
     <!-- lightGallery CSS (http://sachinchoolur.github.io/lightGallery) -->
 
-     <link rel="stylesheet" href="assets/css/helper.css" />
+    <!-- Template master CSS -->
+    <link rel="stylesheet" href="assets/css/helper.css" />
     <link rel="stylesheet" href="assets/css/theme.css" />
   </head>
 
   <!-- ===========
 	///// Body /////
 	================
-	 -->
+	* Use class "tt-boxed" to enable page boxed layout globally (affects all elements containing class "tt-wrap").
+	* Use class "tt-smooth-scroll" to enable page smooth scrolling.
+	* Use class "tt-transition" to enable page transitions.
+	* Use class "tt-magic-cursor" to enable magic cursor.
+	-->
   <body
     id="body"
     class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor"
@@ -157,7 +163,9 @@
 
               <!-- Begin overlay menu 
 							======================== 
- -->
+							* Use class "tt-ol-menu-center" to align menu to center.
+							* Use class "tt-ol-menu-count" to enable menu counter.
+							-->
               <nav class="tt-overlay-menu tt-ol-menu-center tt-ol-menu-count">
                 <div class="tt-ol-menu-holder">
                   <div class="tt-ol-menu-inner tt-wrap">
@@ -231,7 +239,17 @@
           <!-- ========================
 					///// Begin page header /////
 					============================= 
-				 	-->
+					* Use class "ph-full" to enable fullscreen size.
+					* Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).
+					* Use class "ph-center" to enable content center position.
+					* Use class "ph-bg-image" to enable page header background image (required for a portfolio single project!).
+					* Use class "ph-bg-image-is-light" if needed, it makes the elements dark and more visible if you use a very light image (effect only with class "ph-bg-image").
+					* Use class "ph-image-shadow" to enable page header background image (effect only with class "ph-bg-image").
+					* Use class "ph-image-cropped" to crop image. It fixes image dimensions (no effect for "ph-bg-image"!).
+					* Use class "ph-image-cover-*" to set image overlay opacity. For example "ph-image-cover-2" or "ph-image-cover-2-5" (up to "ph-image-cover-9-5").
+					* Use class "ph-content-parallax" to enable content parallax.
+					* Use class "ph-stroke" to enable caption title stroke style.
+					-->
           <div
             id="page-header"
             class="
@@ -317,18 +335,17 @@
             <div class="tt-section no-padding-bottom">
               <div class="tt-section-inner">
                 <!-- Begin tt-Heading 
-						 		-->
+								====================== 
+								* Use class "tt-heading-xsm", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set caption size (no class = default size).
+								* Use class "tt-heading-stroke" to enable stroke style.
+								* Use class "tt-heading-center" to align tt-Heading to center.
+								* Use prepared helper class "max-width-*" to add custom width if needed. Example: "max-width-800". More info about helper classes can be found in the file "helper.css".
+								-->
                 <div
-                  class="
-                    tt-heading tt-heading-lg tt-heading-left
-                    <!--
-                    margin-bottom-10-p
-                    -->
-                    anim-fadeinup
-                  "
+                  class="tt-heading tt-heading-lg tt-heading-left anim-fadeinup"
                 >
                   <!-- <h3 class="tt-heading-subtitle text-gray">Latest Projects</h3> -->
-                  <h2 class="tt-heading-title font-medium">
+                  <h2 class="tt-heading-title text-lg-big ml-big">
                     <div class="hero-text">WATCH OUR</div>
                     <div class="hero-sub-text">SHOWREEL</div>
                   </h2>
@@ -342,24 +359,27 @@
                       ></video>
                     </div>
                   </div>
-                  <!-- <div class="tt-btn tt-btn-link margin-top-20">
-                    <a
-                      href="portfolio-grid-creative-1.html"
-                      data-hover="See All Works"
-                      >See All Works</a
-                    >
-                  </div> -->
                 </div>
                 <!-- End tt-Heading -->
 
                 <!-- Begin portfolio grid (works combined with tt-Ggrid!)
 								========================== 
- 
+								* Use class "pgi-hover" to enable portfolio grid item hover effect (behavior depends on "ttgr-gap-*" classes below!).
+								* Use class "pgi-cap-hover" to enable portfolio grid item caption hover effect (effect only with class "pgi-cap-inside"! Also no effect on mobile devices!).
+								* Use class "pgi-cap-center" to position portfolio grid item caption to center.
+								* Use class "pgi-cap-inside" to position portfolio grid item caption to inside.
 								-->
                 <div id="portfolio-grid" class="pgi-cap-inside pgi-hover">
                   <!-- Begin tt-Grid
 									=================== 
-									 -->
+									* Use class "ttgr-layout-2", "ttgr-layout-3", "ttgr-layout-4" to set grid layout (columns). No class = one column.
+									* Use class "ttgr-layout-1-2", "ttgr-layout-2-1", "ttgr-layout-2-3", "ttgr-layout-3-2", "ttgr-layout-3-4" or "ttgr-layout-4-3" to set grid mixed layout (columns).
+									* Use class "ttgr-layout-creative-1" or "ttgr-layout-creative-2" to set grid creative mixed layout (no effect with classes "ttgr-portrait", "ttgr-portrait-half", "ttgr-not-cropped" and "ttgr-shifted").
+									* Use class "ttgr-portrait" or "ttgr-portrait-half" to enable portrait mode (no effect with classes "ttgr-layout-creative-1", "ttgr-layout-creative-2" and "ttgr-not-cropped").
+									* Use class "ttgr-gap-1", "ttgr-gap-2", "ttgr-gap-3", "ttgr-gap-4", "ttgr-gap-5" or "ttgr-gap-6" to add space between items.
+									* Use class "ttgr-not-cropped" to enable not cropped mode (effect only with classes "ttgr-layout-2", "ttgr-layout-3" and "ttgr-layout-4").
+									* Use class "ttgr-shifted" to enable shifted layout (effect only with classes "ttgr-layout-2", "ttgr-layout-3" and "ttgr-layout-4").
+									-->
                   <div
                     class="
                       tt-grid
@@ -402,9 +422,9 @@
 
                             <div class="pgi-caption">
                               <div class="pgi-caption-inner">
-                                <h2 class="pgi-title">Branding UI/UX</h2>
+                                <h2 class="pgi-title">Le Studio</h2>
                                 <div class="pgi-categories-wrap">
-                                  <div class="pgi-category">Le studio</div>
+                                  <div class="pgi-category">Branding UI/UX</div>
                                   <!-- <div class="pgi-category">Varia</div> -->
                                 </div>
                                 <!-- /.pli-categories-wrap -->
@@ -425,7 +445,8 @@
                         <div class="ttgr-item-inner">
                           <!-- Begin portfolio grid item 
 													===============================
- 													-->
+													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
+													-->
                           <div class="portfolio-grid-item anim-parallax">
                             <a
                               href="single-project-2.html"
@@ -451,9 +472,9 @@
 
                             <div class="pgi-caption">
                               <div class="pgi-caption-inner">
-                                <h2 class="pgi-title">Branding UI/UX</h2>
+                                <h2 class="pgi-title">Quotes</h2>
                                 <div class="pgi-categories-wrap">
-                                  <div class="pgi-category">Quotes</div>
+                                  <div class="pgi-category">Branding UI/UX</div>
                                   <!-- <div class="pgi-category">Varia</div> -->
                                 </div>
                               </div>
@@ -473,7 +494,8 @@
                         <div class="ttgr-item-inner">
                           <!-- Begin portfolio grid item 
 													===============================
- 													-->
+													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
+													-->
                           <div class="portfolio-grid-item">
                             <a
                               href="single-project-3.html"
@@ -499,9 +521,9 @@
 
                             <div class="pgi-caption">
                               <div class="pgi-caption-inner">
-                                <h2 class="pgi-title">Branding UI/UX</h2>
+                                <h2 class="pgi-title">Brouilles</h2>
                                 <div class="pgi-categories-wrap">
-                                  <div class="pgi-category">Broulies</div>
+                                  <div class="pgi-category">Branding UI/UX</div>
                                   <!-- <div class="pgi-category">Varia</div> -->
                                 </div>
                                 <!-- /.pli-categories-wrap -->
@@ -522,7 +544,8 @@
                         <div class="ttgr-item-inner">
                           <!-- Begin portfolio grid item 
 													===============================
- 													-->
+													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
+													-->
                           <div class="portfolio-grid-item">
                             <a
                               href="single-project-4.html"
@@ -548,9 +571,11 @@
 
                             <div class="pgi-caption">
                               <div class="pgi-caption-inner">
-                                <h2 class="pgi-title">Wed Development</h2>
+                                <h2 class="pgi-title">Foodie</h2>
                                 <div class="pgi-categories-wrap">
-                                  <div class="pgi-category">Foodies</div>
+                                  <div class="pgi-category">
+                                    Wed Development
+                                  </div>
                                   <!-- <div class="pgi-category">Varia</div> -->
                                 </div>
                                 <!-- /.pli-categories-wrap -->
@@ -576,22 +601,401 @@
             <!-- End tt-section -->
 
             <!-- =======================
-						///// Begin tt-section /////
+						///// Begin tt-section WE ARE ALOOMIC /////
 						============================ 
- 						-->
-            <div
+						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
+						-->            <section
               class="
                 tt-section
-                padding-top-xlg-150
-                padding-bottom-xlg-100
-                padding-left-sm-3-p
-                padding-right-sm-3-p
-                bg-white-accent-3
+                padding-bottom-xlg-150 padding-left-sm-3-p padding-right-sm-3-p
+                bg-white
               "
             >
+              <div class="tt-section-inner tt-wrap max-width-1100">
+                <!-- Begin tt-Heading 
+								====================== 
+								* Use class "tt-heading-xsm", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set caption size (no class = default size).
+								* Use class "tt-heading-stroke" to enable stroke style.
+								* Use class "tt-heading-center" to align tt-Heading to center.
+								* Use prepared helper class "max-width-*" to add custom width if needed. Example: "max-width-800". More info about helper classes can be found in the file "helper.css".
+								-->
+                <div class="anim-fadeinup tt-heading tt-heading-center">
+                  <h3>
+                    <div class="hero-text-center">
+                      WE ARE <span class="hero-sub-text">ALOOMIC</span>
+                    </div>
+                  </h3>
+                  <p class="lead mb-4">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Provident ipsam quia natus pariatur nisi ex tenetur beatae
+                    at quibusdam eveniet. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. At, quasi!
+                  </p>
+                </div>
+                <!-- row -->
+                <div class="row text-xs-center mt-4">
+                  <div class="col">
+                    <img
+                      src="assets/images/partner-1.svg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="col">
+                    <img
+                      src="assets/images/partner-2.svg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="col">
+                    <img
+                      src="assets/images/partner-3.svg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="col">
+                    <img
+                      src="assets/images/partner-4.svg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="text-center margin-top-15-p">
+                    <a
+                      href="portfolio-grid-creative-1.html"
+                      class="text-success text-small"
+                      >See all our clients</a
+                    >
+                  </div>
+                </div>
+                <!-- end row -->
+              </div>
+            </section>
+            <!-- 
+
+
+**********************************************
+CAROUSEL SECCTION
+******************************************
+ -->
+
+            <section
+              class="
+                tt-section
+                margin-bottom-10-p
+                padding-left-sm-3-p padding-right-sm-3-p
+              "
+            >
+              <h2 class="ml-big">
+                <div class="hero-text">WHAT WE DO</div>
+                <div class="hero-sub-text">AND LOVE</div>
+              </h2>
+
+              <div
+
+              class="
+              tt-portfolio-carousel
+              pci-caption-center
+              cursor-drag-mouse-down
+              pc-scale-down
+            "
+            data-simulate-touch="true"
+            data-mousewheel="true"
+            data-keyboard="true"
+            data-grab-cursor="true"
+            data-pagination-type="fraction"
+
+
+               
+              >
+<!-- 
+ -->
+
+                <!-- Begin swiper container -->
+                <div class="swiper-container">
+                  <!-- Begin swiper wrapper (required) -->
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <!-- Begin portfolio carousel item 
+              ===================================
+              * Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens! 
+              -->
+                      <div
+                         class="tt-portfolio-carousel-item"
+                       >
+                        <!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
+                        <figure class="tt-pci-image-wrap cover-opacity-3">
+                          <img
+                            src="assets/images/image 10.png"
+                            alt=""
+                            data-src="assets/images/image 10.png"
+                          />
+                        </figure>
+                        <!-- /.tt-pci-image-wrap -->
+
+                        <div class="tt-pci-caption-front">
+                          <div class="tt-pci-caption">
+                            <div class="tt-pci-caption-inner">
+                              <h2 class="tt-pci-title">WEB DESIGN</h2>
+                              <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                              <div class="tt-pci-categories">
+                                <div class="tt-pci-category">
+                                  Lorem ipsum, dolor sit amet consectetur
+                                  adipisicing elit.
+                                </div>
+                                <!-- <div class="tt-pci-category">Varia</div> -->
+                              </div>
+                              <!-- /.tt-pci-categories -->
+                            </div>
+                            <!-- /.tt-pci-caption-inner -->
+                          </div>
+                          <!-- /.tt-pci-caption -->
+                        </div>
+                        <!-- /.tt-pci-caption-front -->
+
+                        <div class="tt-pci-caption tt-pci-caption-back">
+                          <div class="tt-pci-caption-inner">
+                            <h2 class="tt-pci-title">WEB DESIGN</h2>
+                            <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                            <div class="tt-pci-categories">
+                              <div class="tt-pci-category">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vero libero excepturi esse?
+                              </div>
+                              <!-- <div class="tt-pci-category">Varia</div> -->
+                            </div>
+                            <!-- /.tt-pci-categories -->
+                          </div>
+                          <!-- /.tt-pci-caption-inner -->
+                        </div>
+                        <!-- /.tt-pci-caption -->
+                      </div>
+                      <!-- End portfolio carousel item -->
+                    </div>
+                    <!-- End swiper slide -->
+                    <div class="swiper-slide">
+                      <!-- Begin portfolio carousel item 
+              ===================================
+              * Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens! 
+              -->
+                      <div
+                         class="tt-portfolio-carousel-item"
+                       >
+                        <!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
+                        <figure class="tt-pci-image-wrap cover-opacity-3">
+                          <img
+                            src="assets/images/image 11.png"
+                            alt=""
+                            data-src="assets/images/image 11.png"
+                          />
+                        </figure>
+                        <!-- /.tt-pci-image-wrap -->
+
+                        <div class="tt-pci-caption-front">
+                          <div class="tt-pci-caption">
+                            <div class="tt-pci-caption-inner">
+                              <h2 class="tt-pci-title">UI/UX DESIGN</h2>
+                              <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                              <div class="tt-pci-categories">
+                                <div class="tt-pci-category">
+                                  Lorem ipsum dolor sit amet consectetur
+                                  adipisicing.
+                                </div>
+                                <!-- <div class="tt-pci-category">Varia</div> -->
+                              </div>
+                              <!-- /.tt-pci-categories -->
+                            </div>
+                            <!-- /.tt-pci-caption-inner -->
+                          </div>
+                          <!-- /.tt-pci-caption -->
+                        </div>
+                        <!-- /.tt-pci-caption-front -->
+
+                        <div class="tt-pci-caption tt-pci-caption-back">
+                          <div class="tt-pci-caption-inner">
+                            <h2 class="tt-pci-title">UI/UX DESIGN</h2>
+                            <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                            <div class="tt-pci-categories">
+                              <div class="tt-pci-category">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit.
+                              </div>
+                              <!-- <div class="tt-pci-category">Varia</div> -->
+                            </div>
+                            <!-- /.tt-pci-categories -->
+                          </div>
+                          <!-- /.tt-pci-caption-inner -->
+                        </div>
+                        <!-- /.tt-pci-caption -->
+                      </div>
+                      <!-- End portfolio carousel item -->
+                    </div>
+                    <!-- End swiper slide -->
+
+                    <!-- Begin swiper slide 
+            ======================== -->
+                    <div class="swiper-slide">
+                      <!-- Begin portfolio carousel item 
+              ===================================
+              * Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens! 
+              -->
+                      <div
+                         class="tt-portfolio-carousel-item"
+ 
+                      >
+                        <!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
+                        <figure class="tt-pci-image-wrap cover-opacity-3">
+                          <img
+                            class="tt-pci-image swiper-lazy"
+                            src="assets/images/image 10.png"
+                            data-src="assets/images/image 10.png"
+                            alt="Image"
+                          />
+                        </figure>
+                        <!-- /.tt-pci-image-wrap -->
+
+                        <div class="tt-pci-caption-front">
+                          <div class="tt-pci-caption">
+                            <div class="tt-pci-caption-inner">
+                              <h2 class="tt-pci-title">GRAPHIC.DESIGN</h2>
+                              <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                              <div class="tt-pci-categories">
+                                <div class="tt-pci-category">
+                                  Lorem ipsum dolor sit amet consectetur
+                                  adipisicing elit. Natus, officia?
+                                </div>
+                                <!-- <div class="tt-pci-category">Varia</div> -->
+                              </div>
+                              <!-- /.tt-pci-categories -->
+                            </div>
+                            <!-- /.tt-pci-caption-inner -->
+                          </div>
+                          <!-- /.tt-pci-caption -->
+                        </div>
+                        <!-- /.tt-pci-caption-front -->
+
+                        <div class="tt-pci-caption tt-pci-caption-back">
+                          <div class="tt-pci-caption-inner">
+                            <h2 class="tt-pci-title">GRAPHIC DESIGN</h2>
+                            <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                            <div class="tt-pci-categories">
+                              <div class="tt-pci-category">Nature</div>
+                              <!-- <div class="tt-pci-category">Varia</div> -->
+                            </div>
+                            <!-- /.tt-pci-categories -->
+                          </div>
+                          <!-- /.tt-pci-caption-inner -->
+                        </div>
+                        <!-- /.tt-pci-caption -->
+                      </div>
+                      <!-- End portfolio carousel item -->
+                    </div>
+                  </div>
+                </div>
+                <!-- carousel trigger -->
+                <div class="tt-pc-navigation tt-swiper-nav">
+                  <div class="tt-pc-nav-prev">
+                    <div
+                      class="tt-pc-arrow tt-pc-arrow-prev magnetic-item"
+                    ></div>
+                  </div>
+                  <div class="tt-pc-nav-next">
+                    <div
+                      class="tt-pc-arrow tt-pc-arrow-next magnetic-item"
+                    ></div>
+                  </div>
+                  <div class="tt-pc-pagination"></div>
+                </div>
+              </div>
+
+              <!-- creative for design section -->
+              <div
+                class="
+                  tt-section
+                  margin-bottom-10-p
+                  padding-left-sm-3-p padding-right-sm-3-p
+                "
+              >
+                <div class="services-motto flex-me">
+                  <div class="border-me">
+                    <h1>Creative</h1>
+                  </div>
+                  <img
+                    src="assets/images//image 12.png"
+                    alt=""
+                    style="width: 300px; height: 200px"
+                  />
+                  <div class="word-wrapper">
+                    <h1>Better</h1>
+                    <p style="width: 350px; height: 50px">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iure reprehenderit, mollitia corrupti non assumenda
+                      ratione?
+                    </p>
+                  </div>
+                </div>
+                <!-- motto 2 -->
+                <div class="services-motto flex-me">
+                  <img
+                    src="assets/images//image 12.png"
+                    alt=""
+                    style="width: 300px; height: 200px"
+                  />
+                  <div class="word-wrapper">
+                    <h1>Reasonable</h1>
+                    <h1><span class="mx-3">*</span> for</h1>
+                  </div>
+                  <img
+                    src="assets/images//image 13.png"
+                    alt=""
+                    style="width: 300px; height: 200px; border-radius: 50%"
+                  />
+                </div>
+                <div class="services-motto">
+                  <div class="border-me word-wrapper">
+                    <p>&nbsp;</p>
+                    <h1>every Business</h1>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- =======================
+						///// Begin tt-section /////
+						============================ 
+						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
+						-->
+
+            <section
+              class="tt-section
+                padding-left-sm-3-p
+                padding-right-sm-3-p
+                bg-white-accent-1
+                bg-spiral"
+            >
+            <div class="anim-fadeinup tt-heading tt-heading-center">
+              <h3>
+                <div class="hero-text-center">
+                  WHAT OUR <br>
+                  <span class="hero-sub-text">CLIENTS SAY</span>
+                </div>
+              </h3>
+ 
+            </div>
+
               <div class="tt-section-inner">
+ 
                 <!-- Begin testimonials slider 
-						 				data-speed="900"......................(milliseconds)
+								===============================
+								* Use class "text-center" to align text to the center.
+								* Use class "cursor-drag" to enable cursor drag on carousel hover ("data-simulate-touch" attribute must be enabled!).
+								* Use class "ts-hide-pagination" to hide pagination (for desktop only!).
+								* Use class "ts-hide-navigation" to hide navigation arrows.
+								* Use class "ts-full-width" to enable full width slider.
+								* Available data attributes:
+										data-speed="900"......................(milliseconds)
 										data-autoplay="5000"..................(milliseconds. Note: disabled after user first interactions)
 										data-simulate-touch="true"............(true/false)
 										data-loop="true"......................(true/false)
@@ -618,47 +1022,13 @@
                       <div class="swiper-slide font-alter">
                         <div class="tt-ts-item">
                           <div class="tt-ts-text">
-                            "industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled i " 
-				</div>
-                          <div class="tt-ts-subtext">- Wironimo</div>
+"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus Lorem ipsum dolor sit amet consectetur.  "
                         </div>
-                      </div>
-                      <!-- End swiper slide -->
-
-                      <!-- Begin swiper slide 
-											======================== -->
-                      <div class="swiper-slide font-alter">
-                        <div class="tt-ts-item">
-                          <div class="tt-ts-text">
-		"it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default mo 
-				  essentially unchanged. It was popularised in the 1960s with the release of 
-				  " 
-				</div>
-                          <div class="tt-ts-subtext">- Gneto</div>
-                        </div>
-                      </div>
-                      <!-- End swiper slide -->
-
-                      <!-- Begin swiper slide 
-											======================== -->
-                      <div class="swiper-slide font-alter">
-                        <div class="tt-ts-item">
-                          <div class="tt-ts-text">
-				"cites of the word in classical literature, discovered the undoubtable source.
-				  Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and "                          </div>
-                          <div class="tt-ts-subtext">- Brendak</div>
-                        </div>
-                      </div>
-                      <!-- End swiper slide -->
-
-                      <!-- Begin swiper slide 
-											======================== -->
-                      <div class="swiper-slide font-alter">
-                        <div class="tt-ts-item">
-                          <div class="tt-ts-text">
-                            "generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to gener"
+                          <div class="tt-ts-subtext">
+                           <strong  > Domingo Meneneses</strong> 
+                          <p class="text-muted text-small"> 
+                            Cobrant - CEO</p>  
                           </div>
-                          <div class="tt-ts-subtext">- Gazzzzz</div>
                         </div>
                       </div>
                       <!-- End swiper slide -->
@@ -668,9 +1038,69 @@
                       <div class="swiper-slide font-alter">
                         <div class="tt-ts-item">
                           <div class="tt-ts-text">
-                            "This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet."
+ " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci fugiat aut nam. "
                           </div>
-                          <div class="tt-ts-subtext">- Admanente</div>
+                          <div class="tt-ts-subtext">
+                            <strong  > Thiago Meneneses</strong> 
+                            <p class="text-muted text-small"> Wironimo - CEO</p>  
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End swiper slide -->
+
+                      <!-- Begin swiper slide 
+											======================== -->
+                      <div class="swiper-slide font-alter">
+                        <div class="tt-ts-item">
+                          <div class="tt-ts-text">
+                             " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem sapiente placeat pariatur. "
+                          </div>
+                          <div class="tt-ts-subtext">
+                            <strong  > Brendak Meneneses</strong> 
+                            <p class="text-muted text-small">Brendak - QRO  </p>  
+                              </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide font-alter">
+                        <div class="tt-ts-item">
+                          <img src="assets/images/image 10.png" alt="">
+                          <!-- <div class="tt-ts-text">
+                             " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem sapiente placeat pariatur. "
+                          </div>
+                          <div class="tt-ts-subtext">
+                            <strong  > Brendak Meneneses</strong> 
+                            <p class="text-muted text-small">Brendak - QRO  </p>  
+                              </div> -->
+                        </div>
+                      </div>
+                      <!-- End swiper slide -->
+
+                      <!-- Begin swiper slide 
+											======================== -->
+                      <div class="swiper-slide font-alter">
+                        <div class="tt-ts-item">
+                          <div class="tt-ts-text">
+ " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio officiis dignissimos illum repudiandae! "
+                          </div>
+                          <div class="tt-ts-subtext">
+                             <strong  > Brendak Gazzzzz</strong> 
+                            <p class="text-muted text-small">Gazzzzz - CEO  </p>  
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End swiper slide -->
+
+                      <!-- Begin swiper slide 
+											======================== -->
+                      <div class="swiper-slide font-alter">
+                        <div class="tt-ts-item">
+                          <div class="tt-ts-text">
+  " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla expedita reiciendis error omnis? "
+                          </div>
+                          <div class="tt-ts-subtext">- Admanente
+                            <strong  > Admanente Brendak </strong> 
+                            <p class="text-muted text-small">Meneneses - QRO  </p>  
+                          </div>
                         </div>
                       </div>
                       <!-- End swiper slide -->
@@ -693,31 +1123,335 @@
                 <!-- End testimonials slider -->
               </div>
               <!-- /.tt-section-inner -->
-            </div>
+            </section>
             <!-- End tt-section -->
 
-            <!-- =======================
-						///// Begin tt-section /////
+<!-- 
+
+  
+             **********************************************
+            CAROUSEL SECCTION
+            ******************************************
+              
+ -->
+
+            
+                        <section
+                          class="
+                            tt-section
+                            margin-bottom-10-p
+                            padding-left-sm-3-p padding-right-sm-3-p
+                          "
+                        >
+                          <h2 class="ml-big">
+                            <div class="hero-text">CHECK OUT</div>
+                            <div class="hero-sub-text">OUR BLOG</div>
+                          </h2>
+            
+                          <div
+                            class="
+                              tt-portfolio-carousel
+                              pci-caption-center
+                              cursor-drag-mouse-down
+                              pc-scale-down
+                            "
+                            data-simulate-touch="true"
+                            data-mousewheel="true"
+                            data-keyboard="true"
+                            data-grab-cursor="true"
+                            data-pagination-type="fraction"
+                          >
+
+ 
+
+                            <!-- Begin swiper container -->
+                            <div class="swiper-container">
+                              <!-- Begin swiper wrapper (required) -->
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <!-- Begin portfolio carousel item 
+                          ===================================
+                          * Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens! 
+                          -->
+                                  <a
+                                  href="blog.html"
+                                  class="tt-portfolio-carousel-item"
+                                  data-cursor="Learn<br>More"
+                                   >
+                                    <!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
+                                    <figure class="tt-pci-image-wrap cover-opacity-3">
+                                      <img
+                                        src="assets/images/image 10.png"
+                                        alt=""
+                                        data-src="assets/images/image 10.png"
+                                      />
+                                    </figure>
+                                    <!-- /.tt-pci-image-wrap -->
+            
+                                    <div class="tt-pci-caption-front">
+                                      <div class="tt-pci-caption">
+                                        <div class="tt-pci-caption-inner">
+                                           <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                                          <div class="tt-pci-categories">
+                                            <div class="tt-pci-category">
+                                              <p style="font-size: 25px;">
+
+                                              Avoid the Top 10 Mistakes Made by Beginners
+                                              </p>
+                                            </div>
+                                            <!-- <div class="tt-pci-category">Varia</div> -->
+                                          </div>
+                                          <!-- /.tt-pci-categories -->
+                                        </div>
+                                        <!-- /.tt-pci-caption-inner -->
+                                      </div>
+                                      <!-- /.tt-pci-caption -->
+                                    </div>
+                                    <!-- /.tt-pci-caption-front -->
+            
+                                    <div class="tt-pci-caption tt-pci-caption-back">
+                                      <div class="tt-pci-caption-inner">
+                                         <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                                        <div class="tt-pci-categories">
+                                          <div class="tt-pci-category">
+                                            <p style="font-size: 25px;">
+
+                                            Avoid the Top 10 Mistakes Made by Beginners
+                                            </p>
+                                          </div>
+                                          <!-- <div class="tt-pci-category">Varia</div> -->
+                                        </div>
+                                        <!-- /.tt-pci-categories -->
+                                      </div>
+                                      <!-- /.tt-pci-caption-inner -->
+                                    </div>
+                                    <!-- /.tt-pci-caption -->
+                                  </a>
+                                  <!-- End portfolio carousel item -->
+                                </div>
+                                <!-- End swiper slide -->
+                                <div class="swiper-slide">
+                                  <!-- Begin portfolio carousel item 
+                          ===================================
+                          * Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens! 
+                          -->
+                                  <a href="blog.html"                       
+                                  class="tt-portfolio-carousel-item"
+                                  data-cursor="Learn<br>More"
+                                   >
+                                    <!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
+                                    <figure class="tt-pci-image-wrap cover-opacity-3">
+                                      <img
+                                        src="assets/images/image 11.png"
+                                        alt=""
+                                        data-src="assets/images/image 10.png"
+                                      />
+                                    </figure>
+                                    <!-- /.tt-pci-image-wrap -->
+            
+                                    <div class="tt-pci-caption-front">
+                                      <div class="tt-pci-caption">
+                                        <div class="tt-pci-caption-inner">
+                                           <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                                          <div class="tt-pci-categories">
+                                            <div class="tt-pci-category ">
+                                              <p style="font-size: 25px;">
+                                                5 Surprising Techniques to Improve Your Creativity
+
+                                              </p>
+                                            </div>
+                                            <!-- <div class="tt-pci-category">Varia</div> -->
+                                          </div>
+                                          <!-- /.tt-pci-categories -->
+                                        </div>
+                                        <!-- /.tt-pci-caption-inner -->
+                                      </div>
+                                      <!-- /.tt-pci-caption -->
+                                    </div>
+                                    <!-- /.tt-pci-caption-front -->
+            
+                                    <div class="tt-pci-caption tt-pci-caption-back">
+                                      <div class="tt-pci-caption-inner">
+                                        <!-- <h6 class="tt-pci-title">Lorem ipsum dolor, sit amet consectetur adipisicing.</h6> -->
+                                        <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                                        <div class="tt-pci-categories">
+                                          <div class="tt-pci-category">
+                                            <p style="font-size: 25px;">
+Lorem, ipsum dolor.
+                                            </p>
+                                          </div>
+                                          <!-- <div class="tt-pci-category">Varia</div> -->
+                                        </div>
+                                        <!-- /.tt-pci-categories -->
+                                      </div>
+                                      <!-- /.tt-pci-caption-inner -->
+                                    </div>
+                                    <!-- /.tt-pci-caption -->
+                                  </a>
+                                  <!-- End portfolio carousel item -->
+                                </div>
+                                <!-- End swiper slide -->
+            
+                                <!-- Begin swiper slide 
+                        ======================== -->
+                                <div class="swiper-slide">
+                                  <!-- Begin portfolio carousel item 
+                          ===================================
+                          * Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens! 
+                          -->
+                                  <a href="blog.html"
+                                  class="tt-portfolio-carousel-item"
+                                  data-cursor="Learn<br>More"
+             
+                                  >
+                                    <!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
+                                    <figure class="tt-pci-image-wrap cover-opacity-3">
+                                      <img
+                                        class="tt-pci-image swiper-lazy"
+                                        src="assets/images/image 10.png"
+                                        data-src="assets/images/image 10.png"
+                                        alt="Image"
+                                      />
+                                    </figure>
+                                    <!-- /.tt-pci-image-wrap -->
+            
+                                    <div class="tt-pci-caption-front">
+                                      <div class="tt-pci-caption">
+                                        <div class="tt-pci-caption-inner">
+                                           <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                                          <div class="tt-pci-categories">
+                                            <div class="tt-pci-category">
+                                              <p style="font-size: 25px;">
+
+                                                Why Some People Almost Always Save Money With This Method
+                                               </p>
+                                            </div>
+                                            <!-- <div class="tt-pci-category">Varia</div> -->
+                                          </div>
+                                          <!-- /.tt-pci-categories -->
+                                        </div>
+                                        <!-- /.tt-pci-caption-inner -->
+                                      </div>
+                                      <!-- /.tt-pci-caption -->
+                                    </div>
+                                    <!-- /.tt-pci-caption-front -->
+            
+                                    <div class="tt-pci-caption tt-pci-caption-back">
+                                      <div class="tt-pci-caption-inner">
+                                         <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+                                        <div class="tt-pci-categories">
+                                          <div class="tt-pci-category">
+                                            <p style="font-size: 25px;" >
+                                              Why Some People Almost Always Save Money With This Method
+   </p>
+                                          </div>
+                                          <!-- <div class="tt-pci-category">Varia</div> -->
+                                        </div>
+                                        <!-- /.tt-pci-categories -->
+                                      </div>
+                                      <!-- /.tt-pci-caption-inner -->
+                                    </div>
+                                    <!-- /.tt-pci-caption -->
+                                  </a>
+                                  <!-- End portfolio carousel item -->
+                                </div>
+                              </div>
+                            </div>
+                            <!-- carousel trigger -->
+                            <div class="tt-pc-navigation tt-swiper-nav">
+                              <div class="tt-pc-nav-prev">
+                                <div
+                                  class="tt-pc-arrow tt-pc-arrow-prev magnetic-item"
+                                ></div>
+                              </div>
+                              <div class="tt-pc-nav-next">
+                                <div
+                                  class="tt-pc-arrow tt-pc-arrow-next magnetic-item"
+                                ></div>
+                              </div>
+                              <div class="tt-pc-pagination"></div>
+                            </div>
+                          </div>
+            
+                        
+                        </section>
+            
+             
+
+
+
+     <!-- =======================
+						///// Begin tt-section  FORM LET SPEAK/////
 						============================ 
  						-->
-            <div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150">
+             
+						<!-- End tt-section -->
+
+            <section class="tt-section">
+              <div id="container">
+                     <h1 class="logo ml-big h2 mb-5">
+                      <div class="hero-text">LET SPEAK</div>
+                      <div class="hero-sub-text">FILL THIS FORM</div>
+                    </h1> 
+                 <div id="form-box">
+                  <i id="prev-btn" class="fas fa-arrow-left"></i>
+                  <i id="next-btn" class="fas fa-arrow-right"></i>
+                  <div id="input-group">
+                    <input id="input-field" required>
+                    <label id="input-label"></label>
+                    <div id="input-progress"></div>
+                  </div>
+                  <div id="progress-bar"></div>
+                </div>
+              </div>
+            
+            </section>
+
+
+
+
+<!-- =======================
+    ///// Begin tt-section  FORM LET SPEAK END HERE  /////
+    ============================ 
+     -->
+
+
+
+
+            <!-- =======================
+						///// Begin tt-section  scrolling text   /////
+						============================ 
+						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
+						-->
+            <section class="tt-section">
               <div class="tt-section-inner">
+                <!-- Begin scrolling text
+								========================== 
+								Change data-scroll-speed="*" to adjust scrolling speed.
+								Use class "scr-text-reverse" to reverse scrolling direction. 
+								Use class "scr-text-stroke" to enable text stroke style (no effect on smaller screens!). 
+								-->
                 <div
                   class="tt-scrolling-text scr-text-stroke font-italic"
                   data-scroll-speed="15"
                 >
                   <div
-                    class="tt-scrolling-text-inner text-dark-3"
-                    data-text="Let's create something awesome together! -"
+                    class="tt-scrolling-text-inner text-dark-3 text-uppercase"
+                    data-text="Let's work together -"
                   >
-                    Let's create something awesome together! -
+                  Let's work together - 
+                    <!-- Let's create something awesome together! - -->
                   </div>
                   <!-- /.tt-scrolling-text-inner -->
                 </div>
                 <!-- End scrolling text -->
 
                 <!-- Begin scrolling text
-						 	-->
+								========================== 
+								Change data-scroll-speed="*" to adjust scrolling speed.
+								Use class "scr-text-reverse" to reverse scrolling direction. 
+								Use class "scr-text-stroke" to enable text stroke style (no effect on smaller screens!). 
+								-->
                 <div
                   class="
                     tt-scrolling-text
@@ -726,119 +1460,128 @@
                   "
                   data-scroll-speed="15"
                 >
-                  <div
-                    class="tt-scrolling-text-inner text-dark-3"
-                    data-text="Let's work together! -"
-                  >
-                    Let's work together! -
-                  </div>
+                <div
+                class="tt-scrolling-text-inner text-dark-3 text-uppercase"
+                data-text="Let's work together -"
+              >
+              Let's work together
+                <!-- Let's create something awesome together! - -->
+              </div>
                   <!-- /.tt-scrolling-text-inner -->
                 </div>
                 <!-- End scrolling text -->
               </div>
               <!-- /.tt-section-inner -->
-            </div>
+            </section>
             <!-- End tt-section -->
 
-         <!-- =======================
-						///// Begin tt-section /////
-						============================ 
- 						-->
-						<div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150 padding-left-sm-3-p padding-right-sm-3-p bg-white-accent-3">
-							<div class="tt-section-inner tt-wrap">
 
-								<div class="tt-row">
-									<div class="tt-col-lg-5 padding-right-lg-5-p">
 
-							 			-->
-										<div class="tt-heading tt-heading-lg margin-bottom-10-p anim-fadeinup">
-											<h3 class="tt-heading-subtitle text-gray">Get in Touch</h3>
-											<h2 class="tt-heading-title">Drop Us<br> A Line</h2>
-										</div>
-										<!-- End tt-Heading -->
 
-										<!-- <div class="text-gray padding-bottom-40 anim-fadeinup">
-											<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Molestias assumenda, ratione voluptatibus. Libero nisi laudantium.</p>
-										</div> -->
+            <!-- FOOTER SECTION -->
 
-										<!-- Begin contact info 
-										======================== -->
-										<ul class="tt-contact-info padding-bottom-40 text-gray">
-											<li class="anim-fadeinup">
-												<span class="tt-ci-icon"><i class="fas fa-map-marker-alt"></i></span>
-												121 King Street, Melbourne, Australia
-											</li>
-											<li class="anim-fadeinup">
-												<span class="tt-ci-icon"><i class="fas fa-phone"></i></span>
-												<a href="tel:+123456789000" class="tt-link">+(123) 456 789 000</a>
-											</li>
-											<li class="anim-fadeinup">
-												<span class="tt-ci-icon"><i class="fas fa-envelope"></i></span>
-												<a href="mailto:company@email.com" class="tt-link">company@email.com</a>
-											</li>
-										</ul>
-										<!-- End contact info -->
-
-									</div> <!-- /.tt-col -->
-
-									<div class="tt-col-lg-7">
-
-										<!-- Begin form 
-							 			-->
-										<form id="tt-contact-form" class="tt-form-lg tt-form-minimal tt-hide-labels anim-fadeinup">
-
-											<!-- Begin hidden required fields (https://github.com/agragregra/uniMail) -->
-											<input type="hidden" name="project_name" value="yourwebsiteaddress.com"> <!-- Change value to your site name -->
-											<input type="hidden" name="admin_email" value="your@email.com"> <!-- Change value to your valid email address (where a message will be sent) -->
-											<input type="hidden" name="form_subject" value="Message from yourwebsiteaddress.com"> <!-- Change value to your own message subject -->
-											<!-- End Hidden Required Fields -->
-
-											<div class="tt-row">
-												<div class="tt-col-md-6">
-
-													<div class="tt-form-group">
-														<label>Name</label>
-														<input class="tt-form-control" type="text" name="Name" placeholder="Enter your name" required>
-													</div>
-
-												</div> <!-- /.tt-col -->
-
-												<div class="tt-col-md-6">
-
-													<div class="tt-form-group">
-														<label>Email address</label>
-														<input class="tt-form-control" type="email" name="Email" placeholder="Enter your email" required>
-													</div>
-
-												</div> <!-- /.tt-col -->
-											</div> <!-- /.tt-row -->
-
-											<div class="tt-form-group">
-												<label>Subject</label>
-												<input class="tt-form-control" type="text" name="Subject" placeholder="Subject" required>
-											</div>
-
+            <section class="footers bg-black pt-5 pb-3 fs-6 text-gray">
+              <div class="container pt-5">
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
+                       <div class="footers-logo">
+                           <img src="assets/images/Aloomic_lFooter.svg" alt="Logo" class="img-fluid" style="width:120px;">
+                       </div>
+                       
+                   </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-two">
+                      <h3 class="tt-heading-subtitle text-dark-2">Navigation</h3>
+                       <ul class="list-unstyled">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="portfolio.html">Portfolio</a></li>
+                      <li><a href="about-us.html">About</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                   </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-three">
+                      <h3 class="tt-heading-subtitle text-dark-2">Tell us your needs</h3>
+                       <ul class="list-unstyled">
+                      <li>email@gmail.com</li>
+                      <li>-7 (916) 344 55 22 </li>
+                      <li>New York 11233 <br> USA NY</li>
  
-											<div class="tt-form-group">
-												<label>Message</label>
-												<textarea class="tt-form-control" rows="7" name="Message" placeholder="What's in your mind?" required></textarea>
-												<small class="tt-form-text"><em>* All fields are required!</em></small>
-											</div>
+                      </ul>
+                   </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-four">
+                      <h3 class="tt-heading-subtitle text-dark-2">Services</h3>
+                       <ul class="list-unstyled">
+                      <li><a href="#">UI Design</a></li>
+                      <li><a href="#">Web Design</a></li>
+                      <li><a href="#">Branding</a></li>
+                      <li><a href="#">Branding</a></li>
+                      <li><a href="#">Branding</a></li>
+                      <li><a href="#">Branding</a></li>
+                      <li><a href="#">UI Design</a></li>
+                      <li><a href="#">Web Design</a></li>
+ 
+                     </ul>
+                   </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-five">
+                      <h3 class="tt-heading-subtitle text-grey fs-6">Sign up to newsletter </h3>
+                       <form class="form-group newsletter-box">
+                         <label for="name" class="form-label">EMAIL</label>
 
-											<div class="tt-btn tt-btn-light-outline">
-												<button type="submit" data-hover="Send Message">Send Message</button>
-											</div>
-										</form>
-										<!-- End form -->
+                         <input type="text" id="news-input" class="newsletter" required>
+                          <button id="news-btn" type="submit" class="text-white newsletter__btn"  ><i class="fas fa-arrow-right "></i></button>
+                       </form>
+                       <div id="news-response" class="text-small fs-6"></div>
+                
+                   </div>
+                   
+                  </div>
+              </div>
+           </section>
+           <section class="bg-black  fs-6 text-gray text-muted tt-justify-content-around">
+               <div class="container">
+                   <div class="flex-me">
+                     
+                    <div>
+                      <ul class="list-inline">
+                        <li class="list-inline-item">Behance.</li>
+                        <li class="list-inline-item">Dribble.</li>
+                        <li class="list-inline-item">Pinterest.</li>
+                      </ul>
+                  </div>
+                    <div>
+                      <ul class="list-inline">
+                        <li class="list-inline-item">Behance.</li>
+                        <li class="list-inline-item">Dribble.</li>
+                        <li class="list-inline-item">Pinterest.</li>
+                      </ul>
+                  </div>
+                    <div>
+                       <p class="text-right"> Copyright 2021</p>
+                  </div>
+                    
+                   </div>
+               </div>
+               <!-- footer -->
+               <footer id="tt-footer">
+                <div class="tt-footer-inner">
+               <div class="footer-col tt-align-center-left">
+								<div class="footer-col-inner">
 
-									</div> <!-- /.tt-col -->
-								</div> <!-- /.tt-row -->
+									<!-- You can use whatever button or link here -->
+									<div class="tt-btn tt-btn-link">
+										<a href="#" class="scroll-to-top" data-hover="Back to top">Back to top</a>
+									</div>
 
-							</div> <!-- /.tt-section-inner -->
-						</div>
-						<!-- End tt-section -->
-
-
+								</div> <!-- /.footer-col-inner -->
+               </div>
+               </div>
+               </footer>
+                <!-- footer -->
+							</div>
+           </section>
+ 
+            <!-- FOOTER SECTION END HERE -->
 					</div>
 					<!-- End page content -->
 					 
@@ -879,6 +1622,7 @@
 
     <!-- Theme master JS -->
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
   </body>
 
   <!-- Mirrored from demo.themetorium.net/html/tank/landing-page-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Nov 2021 22:43:00 GMT -->
