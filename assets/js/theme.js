@@ -1,46 +1,3 @@
-/* =================================================================
-* Template JS
-* 
-* Template:    Tank - Creative Portfolio Showcase HTML Website Template
-* Author:      Themetorium
-* URL:         https://themetorium.net/
-*
-================================================================= */
-
-// Table of Content
-// =================
-// Detect browser
-// Detect mobile device
-// Page transitions
-// Smooth Scrollbar
-// Magic cursor
-// Image lazy loading
-// Main menu (classic)
-// Overlay menu
-// Portfolio slider (full screen slider)
-// Portfolio carousel (full screen carousel)
-// Content carousel
-// Testimonials slider
-// Isotope
-// lightGallery (lightbox plugin)
-// Page header
-// GSAP ScrollTrigger plugin
-// Portfolio list
-// Portfolio interactive
-// Portfolio grid
-// tt-Gallery
-// Accordion
-// Page nav
-// Sidebar
-// Sliding sidebar
-// Scrolling text
-// Scroll between anchors
-// Scroll to top
-// Defer videos (Youtube, Vimeo)
-// Forms
-// Miscellaneous
-//
-
 (function ($) {
   "use strict";
 
@@ -61,12 +18,32 @@
   // ==========================================================
 
   // Detect mobile device (Do not remove!!!)
-  var isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Nokia|Opera Mini/i.test(
-      navigator.userAgent
-    )
-      ? true
-      : false;
+  function detectMob() {
+    const toMatch = [
+      /Android/i,
+      /webOS/i,
+      /iPhone/i,
+      /iPad/i,
+      /iPod/i,
+      /BlackBerry/i,
+      /Windows Phone/i,
+    ];
+
+    return toMatch.some((toMatchItem) => {
+      return navigator.userAgent.match(toMatchItem);
+    });
+  }
+
+  var isMobile = detectMob();
+
+  console.log(isMobile);
+
+  // var isMobile =
+  //   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Nokia|Opera Mini/i.test(
+  //     navigator.userAgent
+  //   )
+  //     ? true
+  //     : false;
 
   // Add class "is-mobile" to </body>
   if (isMobile) {
@@ -1320,6 +1297,7 @@
 
       // Init Swiper
       // =============
+
       var $ttPortfolioSliderSwiper = new Swiper(
         $ttPortfolioSlider.find(".swiper-container")[0],
         {
@@ -3270,6 +3248,17 @@
   function clearText() {
     news_response.innerHTML = "";
   }
+
+  // ######## my_swiper
+  //
+
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  // #####################
 
   // SURVERY FORM JS
   //  ##################

@@ -683,6 +683,399 @@ h1.end.span {
 
 /* SURVEY FORM END HERE */
 
+/* CAROUSEL DISPLAY PROJECT */
+
+.carousel__img-2 {
+  z-index: 2;
+  width: 100%;
+}
+.carousel__text {
+  z-index: 99;
+}
+
+.carousel__img-1 > img,
+.carousel__img-2 > img {
+  border-radius: 10px;
+  box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  height: 100%;
+}
+@media (min-width: 1314px) {
+  .carousel__box {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .carousel__text {
+    max-width: 380px;
+    z-index: 2;
+    color: #fff;
+    top: 65%;
+    right: -40%;
+  }
+
+  .carousel__img-1,
+  .carousel__img-2,
+  .carousel__text {
+    position: absolute;
+  }
+
+  .carousel__img-1 {
+    top: 0;
+    height: 385px;
+    width: 823px;
+    right: -40%;
+    border-radius: 10px;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+  .carousel__img-2 {
+    top: 25%;
+    left: 10%;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1313px) {
+  .carousel__box {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .carousel__text {
+    max-width: 300px;
+    z-index: 99;
+    color: #fff;
+    top: 65%;
+    right: -40%;
+  }
+
+  .carousel__img-1,
+  .carousel__img-2,
+  .carousel__text {
+    position: absolute;
+  }
+
+  .carousel__img-1 {
+    top: 0;
+    height: 385px;
+    width: 523px;
+    right: -40%;
+    border-radius: 10px;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+  .carousel__img-2 {
+    top: 25%;
+    left: -12%;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  .carousel__box {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .carousel__text {
+    max-width: 230px;
+    z-index: 2;
+    color: #fff;
+    top: 40%;
+    right: -15%;
+  }
+  .carousel__text > p {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .carousel__img-1,
+  .carousel__img-2,
+  .carousel__text {
+    position: absolute;
+  }
+
+  .carousel__img-1 {
+    top: 0;
+    height: 250px;
+    width: 500px;
+    right: -6%;
+    border-radius: 10px;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+  .carousel__img-2 {
+    top: 25%;
+    left: -12%;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+}
+
+@media (max-width: 770px) {
+}
+
+@media (max-width: 500px) {
+  .carousel__box {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+  }
+
+  .carousel__img-1,
+  .carousel__img-2,
+  .carousel__text {
+    position: absolute;
+  }
+
+  .carousel__img-1 {
+    top: 0;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+
+  .carousel__img-2 {
+    top: 30px;
+    width: 300px;
+    height: 300px;
+    left: 50px;
+    border-radius: 10px;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+  .carousel__text {
+    top: 250px;
+    right: 0;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 421px) {
+  .carousel__box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+
+  .carousel__img-1,
+  .carousel__img-2,
+  .carousel__text {
+    position: absolute;
+  }
+
+  .carousel__img-1 {
+    top: 0;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+
+  .carousel__img-2 {
+    top: 30px;
+    width: 280px;
+    height: 280px;
+    left: 50px;
+    border-radius: 10px;
+    box-shadow: 6px 16px 65px -27px rgba(0, 0, 0, 0.75);
+  }
+  .carousel__text {
+    top: 250px;
+    right: 7px;
+    flex-wrap: wrap;
+    text-justify: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .carousel__text {
+    top: 250px;
+    right: 43px;
+    flex-wrap: wrap;
+    text-justify: auto;
+  }
+  .carousel__text > p {
+    font-size: 17px;
+  }
+}
+.swiper-pagination {
+  margin-top: 40px;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: green;
+}
+.carousel__text > h3 {
+  direction: rtl;
+  margin-right: 20px;
+}
+
+/* carousel end here */
+
+/* my card */
+
+.myCard {
+  width: 350px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+  position: relative;
+}
+.myCard > img {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.myCard__text {
+  width: 90%;
+  position: absolute;
+  left: 0;
+  bottom: -40%;
+}
+
+/* ###################### AVATAR RESPONSIVENESS */
+
+@media (min-width: 330px) and (max-width: 991px) {
+  .myCard > img {
+    position: absolute;
+    left: 50%;
+    top: -30%;
+  }
+  .myCard__text {
+    bottom: -6%;
+    left: 10px;
+  }
+  .myCard__name {
+    font-size: 25px !important;
+  }
+  .myCard__title > small {
+    font-size: 16px !important;
+  }
+}
+@media (min-width: 994px) and (max-width: 1229px) {
+  .myCard {
+    width: 280px;
+    height: 400px;
+  }
+}
+
+/* ###################### AVATAR RESPONSIVENESS */
+
+/* my card end here */
+
+/* ############ header__bg-box --we create beautiful thing */
+
+.header__bg-box {
+  position: relative;
+}
+
+.header__bg-1 {
+  width: 90%;
+  margin: 0 auto;
+}
+.header__bg-1 > img {
+  width: 100%;
+}
+
+.header__bg-2 {
+  position: absolute;
+  z-index: 2;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.header__bg-2 > img {
+  width: 100%;
+}
+
+.header__bg-box > h1 {
+  position: absolute;
+  z-index: 99;
+  text-transform: uppercase;
+  vertical-align: middle;
+  letter-spacing: 1.2;
+  text-align: left;
+  left: 17%;
+  top: 35%;
+}
+/* ############## header__bg-box */
+
+.lead {
+  list-style: none;
+}
+.lead li p {
+  /* margin-: 40px; */
+  font-size: 15px;
+  line-height: 2;
+  color: #fafafa;
+}
+.border-me__top {
+  border-top: 3px solid #555;
+  border-spacing: 50px;
+}
+.services__list {
+  color: #555;
+}
+.services__list-item {
+  list-style: none;
+  margin-bottom: 2px;
+}
+.services__list-item li a:hover,
+.services__list-item li a:active,
+.services__list-item li a:focus {
+  color: #fff;
+}
+.services__image-box {
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+.services__image {
+  width: 100%;
+  height: 100%;
+}
+.tt-text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 0.8px #999;
+  font-size: 80px;
+}
+.services__number {
+  position: absolute;
+  top: -5%;
+  right: 5%;
+  z-index: 2;
+}
+.services__number_two {
+  position: absolute;
+  top: -5%;
+  left: 5%;
+  z-index: 2;
+}
+
 /* ------------------------------------------------------------- *
  * Smooth Scrollbar
  * Source: https://github.com/idiotWu/smooth-scrollbar/
@@ -691,6 +1084,11 @@ h1.end.span {
 /* Hide default scrollbar */
 body:not(.is-mobile).tt-smooth-scroll {
   overflow: hidden;
+}
+#scroll-container {
+  width: auto;
+  height: 100vh;
+  overflow: auto;
 }
 
 /* Scroll content (added if <body> contain class "tt-smooth-scroll". Disabled on mobile devices!) */
