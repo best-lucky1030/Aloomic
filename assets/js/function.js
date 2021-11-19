@@ -195,9 +195,35 @@ $(function () {
         $('#main-menu').addClass('hidden').removeClass('hidden');
         $('#we-do-submenu').addClass('hidden');
     });
+    // $('#scroll_value').css('left', ($('.circle-mark-wrapper').width() - $('#scroll_value').width()) / 2);
+    // for circle-rounding widget
+    var ypos = window.pageYOffset || document.documentElement.scrollTop;
+    var maxYvalue = $(document).height() - $(window).height();
+    var percent = parseInt(ypos * 100 / maxYvalue);
+
+    // for scrolling beginning
+    window.onscroll = function (e) {
+        $('.circle-mark path').css("opacity", 0);
+
+        // called when the window is scrolled.  
+        var ypos = window.pageYOffset || document.documentElement.scrollTop;
+        var maxYvalue = $(document).height() - $(window).height();
+        var percent = parseInt(ypos * 100 / maxYvalue);
+        $('#scroll_value').text(percent + "%");
+    }
+    jssor_1_slider_init();
+
 });
 
+// for scrolling stop
 
+$(window).scroll(function () {
+    clearTimeout($.data(this, 'scrollTimer'));
+    $.data(this, 'scrollTimer', setTimeout(function () {
+        // do something
+        $('.circle-mark path').animate({ opacity: '1' });
+    }, 250));
+});
 // for googlemap
 function initMap() {
     // The location of Uluru
@@ -322,5 +348,63 @@ function initMap() {
     });
     marker.setMap(map);
 }
+// for slide
+window.jssor_1_slider_init = function () {
 
+    var jssor_1_SlideoTransitions = [
+        [{ b: 0, d: 700, x: 216, r: 360, e: { x: 11 } }],
+        [{ b: 0, d: 640, y: 167 }],
+        [{ b: 580, d: 380, x: 832, y: 285 }],
+        [{ b: 700, d: 340, x: 535, y: 376, e: { x: 1, y: 5 } }],
+        [{ b: 800, d: 320, x: 561, y: 465, e: { y: 2 } }],
+        [{ b: 0, d: 700, x: 216, r: 360, e: { x: 11 } }],
+        [{ b: 0, d: 640, y: 167 }],
+        [{ b: 580, d: 380, x: 832, y: 285 }],
+        [{ b: 700, d: 340, x: 535, y: 376, e: { x: 1, y: 5 } }],
+        [{ b: 800, d: 320, x: 561, y: 465, e: { y: 2 } }],
+        [{ b: 0, d: 700, x: 216, r: 360, e: { x: 11 } }],
+        [{ b: 0, d: 640, y: 167 }],
+        [{ b: 580, d: 380, x: 832, y: 285 }],
+        [{ b: 700, d: 340, x: 535, y: 376, e: { x: 1, y: 5 } }],
+        [{ b: 800, d: 320, x: 561, y: 465, e: { y: 2 } }]
+    ];
 
+    var jssor_1_options = {
+        $AutoPlay: 1,
+        $CaptionSliderOptions: {
+            $Class: $JssorCaptionSlideo$,
+            $Transitions: jssor_1_SlideoTransitions
+        },
+        $ArrowNavigatorOptions: {
+            $Class: $JssorArrowNavigator$
+        }
+    };
+
+    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+    /*#region responsive code begin*/
+
+    var MAX_WIDTH = 980;
+
+    function ScaleSlider() {
+        var containerElement = jssor_1_slider.$Elmt.parentNode;
+        var containerWidth = containerElement.clientWidth;
+
+        if (containerWidth) {
+
+            var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+            jssor_1_slider.$ScaleWidth(expectedWidth);
+        }
+        else {
+            window.setTimeout(ScaleSlider, 30);
+        }
+    }
+
+    ScaleSlider();
+
+    $Jssor$.$AddEvent(window, "load", ScaleSlider);
+    $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+    $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+    /*#endregion responsive code end*/
+};
